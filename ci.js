@@ -1,4 +1,13 @@
 
+const adressbtn = document.querySelector('#adress-form')
+adressbtn.addEventListener("click", function(){
+    document.querySelector('.modal').style.display = "flex"
+})
+const adresscloss = document.querySelector('#adress-back')
+adresscloss.addEventListener("click", function(){
+    document.querySelector('.modal').style.display = "none"
+})
+
 // ...slider product...
 let index = 0
 const rightbtnone = document.querySelector('.fa-chevron-right-one')
