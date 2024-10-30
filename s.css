@@ -7,7 +7,6 @@
 header{
     background-color: #D53829;
     text-align: center;
-    
 }
 .container{
     max-width: 1200px;
@@ -28,6 +27,7 @@ nav{
 }
 nav img{
     width: 250px;
+    padding: 20px 0;
 }
 nav ul{
     display: flex;
@@ -50,7 +50,7 @@ nav ul li:nth-child(2) i {
     right: 12px;
     line-height: 30px;
 }
-nav ul li:nth-child(3) button, :nth-child(4) button, :nth-child(5), :nth-child(6) button{
+nav ul li:nth-child(3) button, :nth-child(4) button, :nth-child(5) button, :nth-child(6) button{
     height: 30px;
     padding: 0 10px;
     cursor: pointer;
@@ -157,13 +157,21 @@ nav ul li:nth-child(3) i, :nth-child(4) i, :nth-child(5) i{
     padding:20px 0;
 }
 .product-gallery-one-content-product-item{
-    width: 20%;
-    padding:50px 12px 12px 12px;
+    width: 15%;
+    padding:12px 12px;
     border: 2px solid #000;
     border-radius: 5px;
     cursor: pointer;
-    margin: 5%;
+    margin: 2%;
 }
+.product-gallery-one-content-product > h3 {
+    width: 100%;
+    margin-bottom: 5px;
+    background-color: #b83737;
+    padding: 15px 15px;
+    color: #fff;
+}
+
 .product-gallery-one-conten-litle h2{
     border-bottom: 2px solid  #000;
     padding: 20px 0;
