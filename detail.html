@@ -1,0 +1,129 @@
+<!-- product.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minh Triết Trong Ấn</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="image/hder.webp" alt="">
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href=""><img src="image/logo.png" alt=""></a></li>
+                <li>
+                    <input type="text" name="" id="" placeholder="Tìm kiếm...">
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                </li>
+                <li>
+                    <a href=""></a>
+                    <button>
+                        Danh mục
+                        <i class="fas fa-grid-2"></i>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </li>
+                <li>
+                    <a href=""></a>
+                    <button><i class="fa-solid fa-bell"></i>Thông báo</button>
+                </li>
+                <li>
+                    <a href=""></a>
+                    <button><i class="fa-solid fa-cart-shopping"></i>Giỏ hàng</button>
+                </li>
+                <li id="adress-form">
+                    <a href=""></a>
+                    <button><i class="fa-solid fa-user"></i>Tài khoản</button>
+                </li>
+                <div class="modal">
+                    <div class="modal_overlay"></div>
+                    <div class="modal_body">
+                        <!-- ......đăng nhập..... -->
+                        <!-- <div class="auth-form">
+                                    <div class="auth-form_container">
+                                        <div class="auth-form_header">
+                                            <h3 class="auth-form_heading">Đăng nhập</h3>
+                                            <span class="auth-form_swich-btn">Đăng ký</span>
+                                        </div>
+                    
+                                        <div class="auth-form_form">
+                                            <div class="auth-form_group">
+                                                <input placeholder="Email/SĐT" type="text" class="auth-form_input">
+                                            </div>
+                                            <div class="auth-form_group">
+                                                <input placeholder="Mật khẩu" type="password" class="auth-form_input">
+                                            </div>
+                                    
+                                        </div>
+                                        <div class="auth-form_aside">
+                                            <div class="auth-form_help">
+                                                <a href="">Quên mật khẩu</a>
+                                            </div>
+                                        </div>
+                                        <div class="auth-form_controls">
+                                            <button class="btn">Thoát</button>
+                                            <button class="btn btn--primary">Đăng nhập</button>
+                                        </div>
+                                    </div>
+                                </div>  -->
+                        <!-- ......đăng ký.....  -->
+                        <div class="auth-form register">
+                            <div class="auth-form_container">
+                                <div class="auth-form_header">
+                                    <span class="auth-form_heading">Đăng Ký</span>
+                                    <span class="auth-form_heading">Đăng nhập</span>
+                                </div>
+    
+                                <div class="auth-form_form">
+                                    <div class="auth-form_group">
+                                        <input placeholder="Email/SĐT" type="text" class="auth-form_input">
+                                    </div>
+                                    <div class="auth-form_group">
+                                        <input placeholder="Mật khẩu" type="text" class="auth-form_input">
+                                    </div>
+                                    <div class="auth-form_group">
+                                        <input placeholder="Xác nhận mật khẩu" type="text" class="auth-form_input">
+                                    </div>
+                                </div>
+                                <div class="auth-form_controls">
+                                    <button id="adress-back" class="btn auth-form_controls_back">Thoát</button>
+                                    <button class="btn btn--primary">Đăng ký</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="image/dacnhantam.webp" alt="Minh Triết Trong Ấn" class="img-fluid product-image">
+            </div>
+            <div class="col-md-6 product-details">
+                <h2 class="product-title">Minh Triết Trong Ấn Của Phụ Động Đóng</h2>
+                <div class="flash-sale">FLASH SALE 24%</div>
+                <h3 class="product-price">127.680 đ</h3>
+                <div class="quantity">
+                    <label for="quantity">Số lượng:</label>
+                    <input type="number" id="quantity" min="1" value="1" class="form-control">
+                </div>
+                <button class="btn btn-primary btn-block">Thêm vào giỏ hàng</button>
+                <div class="product-info">
+                    <!-- Add other details (price, etc.) -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="ci.js"></script>
+</html>

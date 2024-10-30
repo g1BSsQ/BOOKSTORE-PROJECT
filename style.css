@@ -1,37 +1,553 @@
-/* Basic styling - customize as needed */
-#bookList .card {
-    margin-bottom: 20px;
-    width: 300px; /* Đặt chiều rộng cố định */
-    height: 350px; /* Đặt chiều cao cố định */
-    overflow: hidden; /* Ẩn nội dung tràn */
+/* Nội dung từ style.css */
+.product-image {
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    /* Important for responsive images */
+    object-fit: contain;
 }
-#bookList img {
-    max-height: 150px; /* Đặt chiều cao tối đa cho hình ảnh */
-    width: auto;
-    margin: 10px auto; /* Center images */
+.product-details {
+    padding: 20px;
 }
-#bookList .card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: calc(100% - 150px); /* Trừ đi chiều cao của hình ảnh */
+.flash-sale {
+    background-color: #FFC107;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: inline-block;
 }
-#bookList .card-title, #bookList .card-text {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+.product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
-.form-inline {
-  display: flex;
+.quantity {
+    margin-bottom: 15px;
 }
-.form-inline input {
-  flex-grow: 1;
-}
-.book-card {
-    border: 1px solid red;
-    border-radius: 10px;
-}
-.btn {
-    background-color: #007bff;
+.quantity input {
+    width: 100%;
+    padding: 10px;
     border-radius: 4px;
+    border: 1px solid #ccc;
+}
+.btn-primary {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    /* Ensure border matches background */
+}
+.product-info table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.product-info th,
+.product-info td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.product-info th {
+    background-color: #f2f2f2;
+}
+/* Add any further styling here */
+/* Nội dung từ s.css */
+.modal_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal_body {
+    width: 550px;
+    height: 500px;
+    background-color: #fff;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.auth-form {
+    width: 500px;
+}
+
+.auth-form_container {
+    padding: 0 32px;
+}
+
+.auth-form_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auth-form_heading {
+    font-size: 1.6rem;
+    color: red;
+    padding: 30px 0 0 60px;
+    cursor: pointer;
+}
+
+.auth-form_form {
+    margin-top: 26px;
+}
+
+.auth-form_group {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.auth-form_input {
+    width: 110%;
+    height: 50px;
+    padding: 0 15px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.auth-form_controls {
+    margin-top: 100px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 40px;
+}
+
+.btn {
+    min-width: 140px;
+    height: 36px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.auth-form_controls_back {
+    margin-left: 12px;
+}
+
+.auth-form_controls_back:hover {
+    background-color: #737373;
+}
+
+.btn.btn--primary {
+    background-color: #b83737;
+    color: #fff;
+}
+
+.auth-form_help {
+    display: flex;
+    justify-content: flex-end;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #D53829;
+    text-align: center;
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* nav...................... */
+nav {
+    background-color: pink;
+}
+
+nav img {
+    width: 250px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li:nth-child(2) {
+    position: relative;
+}
+
+nav ul li:nth-child(2) input {
+    height: 30px;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 5px;
+}
+
+nav ul li:nth-child(2) i {
+    position: absolute;
+    font-size: 15px;
+    right: 12px;
+    line-height: 30px;
+}
+
+nav ul li:nth-child(3) button,
+:nth-child(4) button,
+:nth-child(5),
+:nth-child(6) button {
+    height: 30px;
+    padding: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+nav ul li:nth-child(3) i,
+:nth-child(4) i,
+:nth-child(5) i {
+    padding-right: 5px;
+}
+
+/* ............slider...... */
+.slider-product-one-content {
+    margin-top: 50px;
+    background-color: #e55b4e;
+    padding: 20px;
+}
+
+.slider-product-one-content-title h2 {
+    padding: 10px 10px 10px 0;
+    color: #fff;
+}
+
+.slider-product-one-content-item {
+    background-color: #fff;
+    width: 20%;
+    padding: 50px 12px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px 10px;
+}
+
+.slider-product-one-content-item>img {
+    width: 100%;
+}
+
+.slider-product-one-content-item-text li:first-child {
+    font-weight: bold;
+}
+
+.slider-product-one-content-item-text li:first-child:hover {
+    font-weight: bold;
+    color: red;
+}
+
+.slider-product-one-content-item-text li:nth-child(2) i {
+    color: #eef200;
+    padding-right: 5px;
+}
+
+.slider-product-one-content-item-text li:nth-child(3) a {
+    text-decoration: line-through;
+    color: #333;
+}
+
+.slider-product-one-content-item-text li:nth-child(3) span {
+
+    background-color: red;
+    border-radius: 30%;
+    padding: 3px;
+
+}
+
+.slider-product-one-content-item-text li:nth-child(4) {
+    font-weight: bold;
+}
+
+.slider-product-one-content-item-text li:nth-child(5) {
+    border: 2px solid #000;
+    border-radius: 25px;
+    background-color: #fdfd7e;
+    text-align: center;
+    width: 75%;
+}
+
+.slider-product-one-content {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-product-one-content-items {
+    display: flex;
+}
+
+.slider-product-one-content-btn {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.slider-product-one-content-btn i {
+    color: #000;
+    font-size: 30px;
+    width: 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-product-one-content-items-content {
+    position: relative;
+    height: 400px;
+    transition: all 0.3s ease;
+}
+
+.slider-product-one-content-items {
+    position: absolute;
+}
+
+.slider-product-one-content-items:nth-child(2) {
+    transform: translateX(100%);
+}
+
+/* .............product....... */
+.product-gallery-one-content-product {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.product-gallery-one-content-product-item {
+    width: 20%;
+    padding: 50px 12px 12px 12px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5%;
+}
+
+.product-gallery-one-conten-litle h2 {
+    border-bottom: 2px solid #000;
+    padding: 20px 0;
+}
+
+.product-gallery-one-content-product-item>img {
+    width: 100%;
+}
+
+.product-gallery-one-content-product-item-text li {
+    margin-bottom: 6px;
+}
+
+.product-gallery-one-content-product-item-text li:first-child {
+    font-weight: bold;
+}
+
+.product-gallery-one-content-product-item-text li:first-child:hover {
+    font-weight: bold;
+    color: red;
+}
+
+.product-gallery-one-content-product-item-text li:nth-child(3) a {
+    text-decoration: line-through;
+    color: #333;
+}
+
+.product-gallery-one-content-product-item-text li:nth-child(3) span {
+    background-color: red;
+    border-radius: 30%;
+    padding: 3px;
+}
+
+.product-gallery-one-content-product-item-text li:nth-child(4) {
+    color: red;
+    font-weight: bold;
+}
+
+.product-gallery-one-content-product-item-text li:last-child i {
+    color: #e9ec44;
+}
+
+
+/* ...base.css.... */
+.gird {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* nếu không muốn sử dụng .gird */
+.gird__full-width {
+    width: 100%;
+}
+
+.gird__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* chia 5 item trên 1 chiều ngang */
+.gird__colum-2-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+/* ....footer.... */
+.footer {
+    border-top: 5px solid red;
+    padding-top: 30px;
+}
+
+.footer__heading {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.footer__list {
+    padding-left: 0;
+}
+
+.footer-item-link {
+    color: #737373;
+    font-size: 1.2rem;
+    padding: 2px 0;
+    display: block;
+}
+
+.footer-item-link:hover {
+    color: red;
+}
+
+.footer-img {
+    width: 50%;
+
+}
+
+.gird__row2 {
+    text-align: center;
+}
+
+/* ......modal */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+.modal_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal_body {
+    width: 550px;
+    height: 500px;
+    background-color: #fff;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.auth-form {
+    width: 500px;
+}
+
+.auth-form_container {
+    padding: 0 32px;
+}
+
+.auth-form_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auth-form_heading {
+    font-size: 1.6rem;
+    color: red;
+    padding: 30px 0 0 60px;
+    cursor: pointer;
+}
+
+.auth-form_form {
+    margin-top: 26px;
+}
+
+.auth-form_group {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.auth-form_input {
+    width: 110%;
+    height: 50px;
+    padding: 0 15px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.auth-form_controls {
+    margin-top: 100px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 40px;
+}
+
+.btn {
+    min-width: 140px;
+    height: 36px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.auth-form_controls_back {
+    margin-left: 12px;
+
+}
+
+.auth-form_controls_back:hover {
+    background-color: #737373;
+}
+
+.btn.btn--primary {
+    background-color: #b83737;
+    color: #fff;
+}
+
+.auth-form_help {
+    display: flex;
+    justify-content: flex-end;
 }
