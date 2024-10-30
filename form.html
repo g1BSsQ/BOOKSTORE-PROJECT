@@ -1,73 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tiêu đề trang của bạn</title>
+    <!-- Thêm Font Awesome (cho biểu tượng sao) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="s.css">
 </head>
-
 <body>
-    <div class="modal">
-        <div class="modal_overlay"></div>
-        <div class="modal_body">
-<!-- ......đăng nhập..... -->
-            <!-- <div class="auth-form">
-                <div class="auth-form_container">
-                    <div class="auth-form_header">
-                        <h3 class="auth-form_heading">Đăng nhập</h3>
-                        <span class="auth-form_swich-btn">Đăng ký</span>
-                    </div>
-
-                    <div class="auth-form_form">
-                        <div class="auth-form_group">
-                            <input placeholder="Email/SĐT" type="text" class="auth-form_input">
-                        </div>
-                        <div class="auth-form_group">
-                            <input placeholder="Mật khẩu" type="password" class="auth-form_input">
-                        </div>
+    <section class="product-gallery-one">
+        <div class="container">
+            <div class="product-gallery-one-content">
+                <div class="product-gallery-one-conten-litle">
+                    <h2>Danh mục sách</h2>
+                </div>
+                <div class="danhmuccon">
+                    <h3>Sách tham khoa</h3>
+                    <div class="product-gallery-one-content-product" id="khung-san-pham"> 
+                    <!-- Các sản phẩm sẽ được chèn vào đây -->
+                        
+                </div>
+                </div>
                 
-                    </div>
-                    <div class="auth-form_aside">
-                        <div class="auth-form_help">
-                            <a href="">Quên mật khẩu</a>
-                        </div>
-                    </div>
-                    <div class="auth-form_controls">
-                        <button class="btn">Thoát</button>
-                        <button class="btn btn--primary">Đăng nhập</button>
-                    </div>
-                </div>
-            </div>  -->
-<!-- ......đăng ký.....  -->
-            <div class="auth-form">
-                <div class="auth-form_container">
-                    <div class="auth-form_header">
-                        <h3 class="auth-form_heading">Đăng Ký</h3>
-                        <span class="auth-form_swich-btn">Đăng nhập</span>
-                    </div>
-
-                    <div class="auth-form_form">
-                        <div class="auth-form_group">
-                            <input placeholder="Email/SĐT" type="text" class="auth-form_input">
-                        </div>
-                        <div class="auth-form_group">
-                            <input placeholder="Mật khẩu" type="text" class="auth-form_input">
-                        </div>
-                        <div class="auth-form_group">
-                            <input placeholder="Xác nhận mật khẩu" type="text" class="auth-form_input">
-                        </div>
-                    </div>
-                    <div class="auth-form_controls">
-                        <button class="btn auth-form_controls_back">Thoát</button>
-                        <button class="btn btn--primary">Đăng ký</button>
-                    </div>
-                </div>
-            </div> 
-
+            </div>
         </div>
-    </div>
-</body>
+    </section>
 
+    <script src="sp.js"></script>
+    <script>
+        // const khungSanPham = document.getElementById('khung-san-pham');
+
+        // galleryProducts.forEach(sanPham => {
+        //     const htmlSanPham = `
+        //         <div class="product-gallery-one-content-product-item">
+        //             <img src="${sanPham.anh}" alt="${sanPham.tenSach}">
+        //             <div class="product-gallery-one-content-product-item-text">
+        //                 <li>${sanPham.tenSach}</li>
+        //                 <li>${sanPham.moTa}</li>
+        //                 <li><a href="">${sanPham.giaGoc}</a><sup>đ</sup><span>-${sanPham.giamGia}%</span></li>
+        //                 <li>${sanPham.giaSauGiam} <sup>đ</sup></li>
+        //                 <li>Tặng mã giảm ${sanPham.giamGiaMa} <sup>đ</sup></li>
+        //                 <li>
+        //                     ${taoSao(sanPham.danhGia)} 
+        //                 </li>
+        //             </div>
+        //         </div>
+        //     `;
+        //     khungSanPham.innerHTML += htmlSanPham;
+        // });
+    </script>
+</body>
 </html>
