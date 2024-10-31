@@ -197,12 +197,14 @@ nav ul li:nth-child(3) i, :nth-child(4) i, :nth-child(5) i, :nth-child(6) i{
 .slider-product-one-content-item-text li:nth-child(3) span{
    
         background-color: red;
-        border-radius: 30%;
+        border-radius: 10%;
         padding: 3px;
+        margin-left: 5px;
     
 }
 .slider-product-one-content-item-text li:nth-child(4) {
     font-weight: bold;
+    margin: 4px 0 10px 0;
 } 
 .slider-product-one-content-item-text li:nth-child(5){
     border: 2px solid #000;
@@ -210,6 +212,7 @@ nav ul li:nth-child(3) i, :nth-child(4) i, :nth-child(5) i, :nth-child(6) i{
     background-color: #fdfd7e;
     text-align: center;
     width: 100%;
+    margin: 4px 0;
  }
 .slider-product-one-content-items{
     text-align: center;
@@ -291,13 +294,16 @@ nav ul li:nth-child(3) i, :nth-child(4) i, :nth-child(5) i, :nth-child(6) i{
     font-weight: bold;
     color: red;
 }
+.product-gallery-one-content-product-item-text li:nth-child(2) a {
+    text-decoration: line-through;
+}
 .product-gallery-one-content-product-item-text li:nth-child(3) a{
     text-decoration: line-through;
     color: #333;
 }
 .product-gallery-one-content-product-item-text li:nth-child(3) span{
     background-color: red;
-    border-radius: 30%;
+    border-radius: 6%;
     padding: 3px;
 }
 .product-gallery-one-content-product-item-text li:nth-child(4){

@@ -64,8 +64,8 @@ function displayProductsByCategory(products) {
         <div class="product-gallery-one-content-product-item-text">
           <li>${product.tenSach}</li>
           <li>${product.moTa}</li>
-          <li>${product.giaGoc}<sup>đ</sup> -${product.giamGia}%</li>
-          <li>${giaSauGiam} <sup>đ</sup></li>
+          <li><a>${product.giaGoc.toLocaleString('en-US')} </a><sup>đ</sup> <span>-${product.giamGia}%</span></li>
+          <li>${giaSauGiam.toLocaleString('en-US')} <sup>đ</sup></li>
           <li>Tặng mã giảm ${product.giamGiaMa} <sup>đ</sup></li>
           <li class="star-ratings">
             ${createStarRating(product.danhGia)}
