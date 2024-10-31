@@ -52,30 +52,129 @@ nav ul li:nth-child(2) i {
 }
 nav ul li:nth-child(3) button, :nth-child(4) button, :nth-child(5) button, :nth-child(6) button{
     height: 30px;
+    background-color: #737373;
+    color: #fff;
     padding: 0 10px;
     cursor: pointer;
     border-radius: 5px;
 }
-nav ul li:nth-child(3) i, :nth-child(4) i, :nth-child(5) i{
-   padding-right: 5px;
+nav ul li:nth-child(3) i, :nth-child(4) i, :nth-child(5) i, :nth-child(6) i{
+    padding-top: 5px;
+    padding-right: 10px;
+    font-size: 20px;
 }
+/* ......modal */
+.auth-form_form span{
+    display: block;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+.modal_overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0 , 0, 0.5);
+}
+.modal_body{
+    width: 550px;
+    height: 500px;
+    background-color:#fff ;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+.auth-form{
+    width: 500px;
+}
+.auth-form_container{
+    padding: 0 32px;
+}
+.auth-form_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.auth-form_heading {
+    font-size: 1.6rem;
+    color: red;
+    padding: 30px 0 0 175px;
+    cursor: pointer;
+}
+.auth-form_form{
+    margin-top: 26px;
+}
+.auth-form_group{
+    margin-bottom: 35px;
+    text-align: center;
+}
+.auth-form_input{
+    width: 110%;
+    height: 50px;
+    padding: 0 15px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.auth-form_controls{
+    margin-top: 100px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 40px;
+}
+.btn{
+    min-width: 140px;
+    height: 36px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+.auth-form_controls_back{
+    margin-right: 12px;
+
+}
+.auth-form_controls_back:hover{
+    background-color: #737373;
+}
+.btn.btn--primary{
+    background-color: #b83737;
+    color: #fff;
+}
+.auth-form_help{
+    display: flex;
+    justify-content:flex-end;
+}
+
 /* ............slider...... */
 .slider-product-one-content{
     margin-top: 50px;
     background-color: #e55b4e;
     padding: 20px;
+    position: relative;
+    overflow: hidden;
 }
 .slider-product-one-content-title h2{ 
     padding: 10px 10px 10px 0;
     color: #fff;
 }
 .slider-product-one-content-item{
+    display: block;
     background-color: #fff;
     width: 20%;
-    padding:50px 12px 12px;
+    padding:50px 0 12px 12px;
     border-radius: 10px;
     cursor: pointer;
-    margin: 10px 10px;
+    margin-left: 30px;
 }
 .slider-product-one-content-item>img{
     width: 100%;
@@ -112,25 +211,25 @@ nav ul li:nth-child(3) i, :nth-child(4) i, :nth-child(5) i{
     text-align: center;
     width: 75%;
  }
-.slider-product-one-content{
-    position: relative;
-    overflow: hidden;
-}
 .slider-product-one-content-items{
+    text-align: center;
     display: flex;
+    width: 100%;
+    margin-right: 12px;
+    margin-left: -12px;
+    padding: 15px;
 }
 .slider-product-one-content-btn{
     position: absolute;
     top:50%;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 97%;
 }
 .slider-product-one-content-btn i {
     color: #000;
     font-size: 30px;
     width: 20px;
-    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,6 +238,7 @@ nav ul li:nth-child(3) i, :nth-child(4) i, :nth-child(5) i{
     cursor: pointer;
 }
 .slider-product-one-content-items-content{
+    display: flex;
     position: relative;
     height: 400px;
     transition: all 0.3s ease;
@@ -149,6 +249,7 @@ nav ul li:nth-child(3) i, :nth-child(4) i, :nth-child(5) i{
 .slider-product-one-content-items:nth-child(2){
     transform: translateX(100%);
 }
+
 /* .............product....... */
 .product-gallery-one-content-product{
     display: flex;
@@ -157,12 +258,12 @@ nav ul li:nth-child(3) i, :nth-child(4) i, :nth-child(5) i{
     padding:20px 0;
 }
 .product-gallery-one-content-product-item{
-    width: 15%;
-    padding:12px 12px;
+    width: 20%;
+    padding: 12px 24px 12px 24px;
     border: 2px solid #000;
     border-radius: 5px;
     cursor: pointer;
-    margin: 2%;
+    margin: 2% 0
 }
 .product-gallery-one-content-product > h3 {
     width: 100%;
@@ -184,6 +285,7 @@ nav ul li:nth-child(3) i, :nth-child(4) i, :nth-child(5) i{
 }
 .product-gallery-one-content-product-item-text li:first-child{
     font-weight: bold;
+    font-size: 22px;
 }
 .product-gallery-one-content-product-item-text li:first-child:hover{
     font-weight: bold;
@@ -204,6 +306,7 @@ nav ul li:nth-child(3) i, :nth-child(4) i, :nth-child(5) i{
 }
 .product-gallery-one-content-product-item-text li:last-child i{
     color: #e9ec44;
+    padding-right: 1px;
 }
 
 
@@ -258,87 +361,4 @@ nav ul li:nth-child(3) i, :nth-child(4) i, :nth-child(5) i{
 }
 
 /* ......modal */
-.modal{
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-}
-.modal_overlay{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0 , 0, 0.5);
-}
-.modal_body{
-    width: 550px;
-    height: 500px;
-    background-color:#fff ;
-    margin: auto;
-    position: relative;
-    z-index: 1;
-}
-.auth-form{
-    width: 500px;
-}
-.auth-form_container{
-    padding: 0 32px;
-}
-.auth-form_header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.auth-form_heading {
-    font-size: 1.6rem;
-    color: red;
-    padding: 30px 0 0 60px;
-    cursor: pointer;
-}
-.auth-form_form{
-    margin-top: 26px;
-}
-.auth-form_group{
-    margin-bottom: 35px;
-    text-align: center;
-}
-.auth-form_input{
-    width: 110%;
-    height: 50px;
-    padding: 0 15px;
-    border-radius: 5px;
-    font-size: 20px;
-}
-.auth-form_controls{
-    margin-top: 100px;
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 40px;
-}
-.btn{
-    min-width: 140px;
-    height: 36px;
-    text-decoration: none;
-    border: none;
-    border-radius: 2px;
-    font-size: 20px;
-    align-items: center;
-    cursor: pointer;
-}
-.auth-form_controls_back{
-    margin-left: 12px;
-
-}
-.auth-form_controls_back:hover{
-    background-color: #737373;
-}
-.btn.btn--primary{
-    background-color: #b83737;
-    color: #fff;
-}
-.auth-form_help{
-    display: flex;
-    justify-content:flex-end;
-}
+ 
