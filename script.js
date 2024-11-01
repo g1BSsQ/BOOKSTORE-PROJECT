@@ -1,4 +1,3 @@
-
 function createStarRating(rating) {
   let stars = '';
   const fullStars = Math.floor(rating);
@@ -89,3 +88,8 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log("No products to display");
   }
 });
+
+
+
+
+    

@@ -170,13 +170,14 @@ nav ul li:nth-child(3) i, :nth-child(4) i, :nth-child(5) i, :nth-child(6) i{
 .slider-product-one-content-item{
     display: block;
     background-color: #fff;
-    width: 20%;
     padding: 30px 6px 12px 6px;
     border-radius: 10px;
     cursor: pointer;
     margin-left: 30px;
+        flex-basis: calc(20% - 30px);
+            max-width: calc(20% - 30px);
 }
-.slider-product-one-content-item>img{
+.slider-product-one-content-item img {
     width: 100%;
 }
 .slider-product-one-content-item-text li:first-child {
@@ -207,13 +208,16 @@ nav ul li:nth-child(3) i, :nth-child(4) i, :nth-child(5) i, :nth-child(6) i{
     margin: 4px 0 10px 0;
 } 
 .slider-product-one-content-item-text li:nth-child(5){
-    border: 2px solid #000;
+    border: none;
     border-radius: 25px;
     background-color: #fdfd7e;
     text-align: center;
     width: 100%;
     margin: 4px 0;
  }
+.slider-product-one-content-item:hover {
+    transform: scale(1.1);
+}
 .slider-product-one-content-items{
     text-align: center;
     display: flex;
@@ -242,15 +246,15 @@ nav ul li:nth-child(3) i, :nth-child(4) i, :nth-child(5) i, :nth-child(6) i{
 }
 .slider-product-one-content-items-content{
     display: flex;
-    position: relative;
     height: 400px;
-    transition: all 0.3s ease;
+    transition: all 0.7s ease;
 }
-.slider-product-one-content-items{
+.slider-product-one-content-items {
     position: absolute;
-}
-.slider-product-one-content-items:nth-child(2){
-    transform: translateX(100%);
+    min-width: 100%;
+        display: flex;
+        align-items: center;
+        transition: all 0.7s ease;
 }
 
 /* .............product....... */
@@ -263,7 +267,7 @@ nav ul li:nth-child(3) i, :nth-child(4) i, :nth-child(5) i, :nth-child(6) i{
 .product-gallery-one-content-product-item{
     width: 20%;
     padding: 12px 24px 12px 24px;
-    border: 2px solid #000;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
     margin: 2% 0
@@ -274,6 +278,15 @@ nav ul li:nth-child(3) i, :nth-child(4) i, :nth-child(5) i, :nth-child(6) i{
     background-color: #b83737;
     padding: 15px 15px;
     color: #fff;
+}
+.product-gallery-one-content-product-item {
+    transition: box-shadow 0.3s ease;
+    /* Smooth transition for the hover effect */
+}
+
+.product-gallery-one-content-product-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Add shadow on hover */
 }
 
 .product-gallery-one-conten-litle h2{
