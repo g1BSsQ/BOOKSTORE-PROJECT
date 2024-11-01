@@ -16,95 +16,53 @@
     <header>
         <img src="image/hder.webp" alt="">
     </header>
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href=""><img src="image/logo.png" alt=""></a></li>
-                <li>
-                    <input type="text" name="" id="" placeholder="Tìm kiếm...">
-                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-                </li>
-                <li>
-                    <a href=""></a>
-                    <button>
-                        Danh mục
-                        <i class="fas fa-grid-2"></i>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                </li>
-                <li>
-                    <a href=""></a>
-                    <button><i class="fa-solid fa-bell"></i>Thông báo</button>
-                </li>
-                <li>
-                    <a href=""></a>
-                    <button><i class="fa-solid fa-cart-shopping"></i>Giỏ hàng</button>
-                </li>
-                <li id="adress-form">
-                    <a href=""></a>
-                    <button><i class="fa-solid fa-user"></i>Tài khoản</button>
-                </li>
-                <div class="modal">
-                    <div class="modal_overlay"></div>
-                    <div class="modal_body">
-                        <!-- ......đăng nhập..... -->
-                        <!-- <div class="auth-form">
-                            <div class="auth-form_container">
-                                <div class="auth-form_header">
-                                    <h3 class="auth-form_heading">Đăng nhập</h3>
-                                    <span class="auth-form_swich-btn">Đăng ký</span>
-                                </div>
-            
-                                <div class="auth-form_form">
-                                    <div class="auth-form_group">
-                                        <input placeholder="Email/SĐT" type="text" class="auth-form_input">
-                                    </div>
-                                    <div class="auth-form_group">
-                                        <input placeholder="Mật khẩu" type="password" class="auth-form_input">
-                                    </div>
-                            
-                                </div>
-                                <div class="auth-form_aside">
-                                    <div class="auth-form_help">
-                                        <a href="">Quên mật khẩu</a>
-                                    </div>
-                                </div>
-                                <div class="auth-form_controls">
-                                    <button class="btn">Thoát</button>
-                                    <button class="btn btn--primary">Đăng nhập</button>
-                                </div>
-                            </div>
-                        </div>  -->
-                        <!-- ......đăng ký.....  -->
-                        <div class="auth-form">
-                            <div class="auth-form_container">
-                                <div class="auth-form_header">
-                                    <span class="auth-form_heading">Đăng Ký</span>
-                                    <!-- <span class="auth-form_heading">Đăng nhập</span> -->
-                                </div>
+     <nav id="nav-bar">
+        <ul class="menu-level-1">
+            <li class="item-lv1">
+                <a href=""><img src="image/logo.png" alt=""></a>
+            </li>
+            <li class="item-lv1">
+                <input type="text" name="" id="" placeholder="Tìm kiếm...">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </li>
+            <li class="item-lv1">
+                <a href="" class="item-lv1-title">Danh mục</a>
+                <i class="fas fa-chevron-down"></i>
+                <ul class="menu-level-2">
+                    <li class="item-lv2">
+                        <a href="#" class="item-lv2-title">Sách tiểu thuyết</a>
+                    </li>
+                    <li class="item-lv2">
+                        <a href="#" class="item-lv2-title">Sách tthiếu nhi</a>
+                    </li>
+                    <li class="item-lv2">
+                        <a href="#" class="item-lv2-title">Sách kỹ năng sống</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="item-lv1">
+                <i class="fa-solid fa-bell"></i>
+                <a href="#" class="item-lv1-title">Thông báo</a>
+            </li>
+            <li class="item-lv1">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <a href="giohang.html" class="item-lv1-title">Giỏ hàng</a>
+            </li>
+            <li class="item-lv1">
+                <i class="fa-solid fa-user"></i>
+                <a href="" class="item-lv1-title">Tài khoản</a>
+                <ul class="menu-level-2">
+                    <li class="item-lv2" id="adress-form">
+                        <a href="form.kn.html" class="item-lv2-title">Đăng nhập</a>
+                    </li>
 
-                                <div class="auth-form_form">
-                                    <div class="auth-form_group">
-                                        <input placeholder="Email/SĐT" type="text" class="auth-form_input">
-                                    </div>
-                                    <div class="auth-form_group">
-                                        <input placeholder="Mật khẩu" type="text" class="auth-form_input">
-                                    </div>
-                                    <div class="auth-form_group">
-                                        <input placeholder="Xác nhận mật khẩu" type="text" class="auth-form_input">
-                                    </div>
-                                </div>
-                                <div class="auth-form_controls">
-                                    <button id="adress-back" class="btn auth-form_controls_back">Thoát</button>
-                                    <button class="btn btn--primary">Đăng ký</button>
-                                </div>
-                            </div>
-                        </div>
+                    <li class="item-lv2" id="adress-form">
+                        <a href="form.dk.html" class="item-lv2-title">Đăng ký</a>
+                    </li>
 
-                    </div>
-                </div>
-            </ul>
-        </div>
+
+            </li>
+        </ul>
     </nav>
     <!-- .....form.. -->
 
