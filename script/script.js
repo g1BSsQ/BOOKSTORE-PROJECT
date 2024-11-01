@@ -59,7 +59,7 @@ function displayProductsByCategory(products) {
       const giaSauGiam = parseFloat((product.giaGoc * (1 - product.giamGia / 100)).toFixed(2));
 
       productDiv.innerHTML = `
-        <img src="${product.anh}" alt="${product.tenSach}">
+        <img src="../${product.anh}" alt="${product.tenSach}">
         <div class="product-gallery-one-content-product-item-text">
           <li>${product.tenSach}</li>
           <li>${product.moTa}</li>
@@ -89,6 +89,14 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+
+function openModal(modalId) {
+  document.getElementById(modalId).style.display = 'flex';
+}
+
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = 'none';
+}
 
 
 

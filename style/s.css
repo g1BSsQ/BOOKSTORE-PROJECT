@@ -1,3 +1,4 @@
+Quang Phạm Tiến Quang
 *{
     margin: 0;;
     padding: 0;;
@@ -22,6 +23,7 @@ a{
     text-decoration: none;
 }
 /* nav...................... */
+
 #nav-bar {
     background-color: pink;
 }
@@ -73,6 +75,7 @@ nav ul li:nth-child(2) i {
    box-shadow: 1px 2px 4px #ddd; 
    position: absolute;
    top: 60px;
+left: -60px;
    padding: 10px 20px;
    display: none;
    z-index: 1000;
@@ -83,11 +86,44 @@ nav ul li:nth-child(2) i {
     color: #000;
 }
 
-.menu-level-2 .item-lv2:hover{
+.menu-level-1 .item-lv1:nth-child(3) .menu-level-2 .item-lv2:hover {
     text-decoration: underline
 }
 .item-lv1:hover .menu-level-2{
     display: block;
+}
+.item-lv1:last-child .menu-level-2:last-child {
+    width: 220px;
+    height: 110px;
+}
+
+.item-lv1:last-child .menu-level-2:last-child .item-lv2 {
+    margin-top: 10px;
+}
+
+.menu-level-1 .item-lv1:last-child .menu-level-2 .item-lv2:nth-child(1) {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: red;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.menu-level-1 .item-lv1:last-child .menu-level-2 .item-lv2:nth-child(2) {
+    border: 3px solid red;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.menu-level-1 .item-lv1:last-child .menu-level-2 .item-lv2:nth-child(1) a {
+    font-size: 20px;
+    color: #fff;
+}
+
+.menu-level-1 .item-lv1:last-child .menu-level-2 .item-lv2:nth-child(2) a {
+    font-size: 20px;
+    color: red;
 }
 /* ......modal */
 .auth-form_form span{
@@ -96,84 +132,95 @@ nav ul li:nth-child(2) i {
     text-transform: capitalize;
     font-size: 15px;
 }
-.modal{
+.modal {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    display: flex;
+    display: none;
+        /* Ẩn modal mặc định */
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
 }
-.modal_overlay{
+.modal_overlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0 , 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
-.modal_body{
-    width: 550px;
-    height: 500px;
-    background-color:#fff ;
-    margin: auto;
+.modal_body {
     position: relative;
-    z-index: 1;
+    background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        z-index: 1001;
+        width: 50%;
+        margin: 0 auto;
+        /* Căn giữa ngang */
+        display: flex;
+        /* Sử dụng flexbox */
+        flex-direction: column;
+        /* Căn dọc */
+        align-items: center;
 }
-.auth-form{
-    width: 500px;
+.auth-form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
 }
-.auth-form p{
-    padding: 0 0 10px 0;
-    font-size: 26px;
+.auth-form_form p {
+    font-size: 24px;
 }
-.auth-form_container{
-    padding: 0 32px;
+.auth-form_container {
+    margin: auto;
+    width: 100%;
 }
-.auth-form_header{
+.auth-form_header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
+
 .auth-form_heading {
-    font-size: 34px;
-    color: red;
-    padding: 30px 0 0 160px;
-    cursor: pointer;
+    font-weight: bold;
+        font-size: 30px;
+        color: #333;
 }
-.auth-form_form{
-    margin-top: 26px;
+.auth-form_form {
+    margin-top: 20px;
 }
-.auth-form_group{
-    margin-bottom: 35px;
-    text-align: center;
+.auth-form_group {
+    margin-bottom: 15px;
 }
-.auth-form_input{
-    width: 110%;
-    height: 50px;
-    padding: 0 15px;
+.auth-form_input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 20px;
 }
-.auth-form_controls{
-    margin-top: 60px;
+.auth-form_controls {
+    margin-top: 55px;
     display: flex;
     justify-content: flex-end;
-    margin-right: 40px;
 }
-.btn{
-    min-width: 140px;
-    height: 36px;
-    text-decoration: none;
+.btn {
+    padding: 10px 20px;
     border: none;
-    border-radius: 2px;
-    font-size: 20px;
-    align-items: center;
+    border-radius: 5px;
     cursor: pointer;
 }
-.auth-form_controls_back{
-    margin-right: 30px;
-    background-color: #737373;
-    color: #fff
+.btn--primary {
+    background-color: #007bff;
+    color: #fff;
+}
 
+.auth-form_controls_back {
+    background-color: #6c757d;
+    color: #fff;
+    margin-right: 10px;
 }
 .auth-form_controls a{
     color: #fff;
@@ -312,6 +359,7 @@ nav ul li:nth-child(2) i {
 .gio-hang .thong-tin .thong-tin-ul:last-child a{
     color: #fff;
     font-size: 20px;
+
 }
 /* ............slider...... */
 .slider-product-one-content{

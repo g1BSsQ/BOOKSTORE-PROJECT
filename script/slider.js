@@ -28,7 +28,7 @@ function generateSliderHTML(sliderData) {
             itemDiv.classList.add('slider-product-one-content-item');
 
             itemDiv.innerHTML = `
-                <img src="${item.imgSrc}" alt="${item.title}">
+                <img src="../${item.imgSrc}" alt="${item.title}">
                 <div class="slider-product-one-content-item-text">
                     <li>${item.title}</li>
                     <li><i class="fa-solid fa-bolt"></i>${item.sale}</li>
