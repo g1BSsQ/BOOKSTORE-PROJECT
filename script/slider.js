@@ -26,14 +26,15 @@ function generateSliderHTML(sliderData) {
         sliderData.slice(i, i + 5).forEach(item => {
             const itemDiv = document.createElement('div');
             itemDiv.classList.add('slider-product-one-content-item');
-
+            itemDiv.setAttribute('onclick', `duaVaoGioHang(${item.id})`);
+            var giaBan = item.giaGoc - item.giaGoc * item.giamGia / 100;
             itemDiv.innerHTML = `
-                <img src="../${item.imgSrc}" alt="${item.title}">
+                <img src="${item.anh}" alt="${item.tenSach}">
                 <div class="slider-product-one-content-item-text">
-                    <li>${item.title}</li>
-                    <li><i class="fa-solid fa-bolt"></i>${item.sale}</li>
-                    <li><a href="#">${item.originalPrice}</a><sup>đ</sup><span>${item.discount}</span></li>
-                    <li>Còn : ${item.finalPrice} <sup>đ</sup></li>
+                    <li>${item.tenSach}</li>
+                    <li><i class="fa-solid fa-bolt"></i>${item.moTa}</li>
+                    <li><a href="#">${item.giaGoc.toLocaleString('en-US')}</a><sup>đ</sup><span>-${item.giamGia}%</span></li>
+                    <li>Còn : ${giaBan.toLocaleString('en-US')} <sup>đ</sup></li>
                     <li><span>${item.status}</span></li>
                 </div>
             `;

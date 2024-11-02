@@ -24,7 +24,7 @@ function loadProducts() {
       products = JSON.parse(storedProducts);
     } catch (error) {
       console.error("Error parsing JSON:", error);
-      products = []; // Default to an empty array if JSON is invalid
+      products = []; 
     }
   } else {
     products = [];
@@ -37,7 +37,7 @@ function displayProductsByCategory(products) {
   const productsList = document.getElementById('hienthisach');
   productsList.innerHTML = ''; // Clear existing content
 
-  // Group products by category
+  
   const categories = products.reduce((acc, product) => {
     if (!acc[product.danhMuc]) {
       acc[product.danhMuc] = [];
@@ -46,7 +46,7 @@ function displayProductsByCategory(products) {
     return acc;
   }, {});
 
-  // Create HTML for each category
+  
   Object.keys(categories).forEach(category => {
     const categoryDiv = document.createElement('div');
     categoryDiv.classList.add('product-gallery-one-content-product');
@@ -55,9 +55,8 @@ function displayProductsByCategory(products) {
     categories[category].forEach(product => {
       const productDiv = document.createElement('div');
       productDiv.classList.add('product-gallery-one-content-product-item');
-
       const giaSauGiam = parseFloat((product.giaGoc * (1 - product.giamGia / 100)).toFixed(2));
-
+      productDiv.setAttribute('onclick', `duaVaoGioHang(${product.id})`);
       productDiv.innerHTML = `
         <img src="../${product.anh}" alt="${product.tenSach}">
         <div class="product-gallery-one-content-product-item-text">
@@ -89,14 +88,36 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-
-function openModal(modalId) {
-  document.getElementById(modalId).style.display = 'flex';
+function duaVaoGioHang(idSach) {
+  alert('Đã thêm vào giỏ hàng' );
+  var danhSachItemGioHang = layDanhSachItemGioHang();
+  var index = danhSachItemGioHang.findIndex(item => item.id == idSach);
+  if (index >= 0) {
+      danhSachItemGioHang[index].soLuong++;
+  } else {
+      danhSachItemGioHang.push(taoDoiTuongItemGioHang(idSach, 1));
+  }
+  localStorage.setItem('gioHang', JSON.stringify(danhSachItemGioHang));
 }
 
-function closeModal(modalId) {
-  document.getElementById(modalId).style.display = 'none';
+var galleryProducts = JSON.parse(localStorage.getItem('galleryProducts'));
+function taoDoiTuongItemGioHang(id, soLuong) {
+  return {
+      id: id,
+      soLuong: soLuong
+  };
 }
+
+function layDanhSachItemGioHang() {
+  var layDanhSachItemGioHang = localStorage.getItem('gioHang');
+  if (layDanhSachItemGioHang) {
+      return JSON.parse(layDanhSachItemGioHang);
+  } else {
+      return [];
+  }
+}
+
+
 
 
 
