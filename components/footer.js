@@ -82,7 +82,7 @@ function generateFooter() {
                     </div>
                 </div>
                 <div class="gird__row2">
-                    <p>&copy Anh HƯNG CAI DÙ</p>
+                    <p>&copy 2024, Book store, Inc, or its affiliates</p>
                 </div>
             </div>
         </footer>

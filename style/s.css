@@ -392,6 +392,11 @@ left: -60px;
 }
 .slider-product-one-content-item-text li:first-child {
     font-weight: bold;
+    white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        display: block;
 }
 .slider-product-one-content-item-text li:first-child:hover{
     font-weight: bold;
