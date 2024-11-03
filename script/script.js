@@ -35,7 +35,7 @@ function loadProducts() {
 
 function displayProductsByCategory(products) {
   const productsList = document.getElementById('hienthisach');
-  productsList.innerHTML = ''; // Clear existing content
+  productsList.innerHTML = ''; 
 
   
   const categories = products.reduce((acc, product) => {
@@ -117,67 +117,7 @@ function layDanhSachItemGioHang() {
   }
 }
 
-function validateLoginForm() {
-  const phone = document.querySelector('#loginModal input[type="text"]').value;
-  const password = document.querySelector('#loginModal input[type="password"]').value;
 
-  if (!phone || !password) {
-      alert("All fields must be filled out");
-      return false;
-  }
-
-  const phoneRegex = /^\d{10}$/;
-  if (!phoneRegex.test(phone)) {
-      alert("Phone number must be 10 digits and only contain numbers");
-      return false;
-  }
-
-  return true;
-}
-
-function validateRegisterForm() {
-  const name = document.querySelector('#registerModal input[placeholder="Họ và tên"]').value;
-  const phone = document.querySelector('#registerModal input[placeholder="Số điện thoại"]').value;
-  const email = document.querySelector('#registerModal input[placeholder="Email"]').value;
-  const password = document.querySelector('#registerModal input[placeholder="Mật khẩu"]').value;
-  const confirmPassword = document.querySelector('#registerModal input[placeholder="Xác nhận mật khẩu"]').value;
-
-  if (!name || !phone || !email || !password || !confirmPassword) {
-      alert("All fields must be filled out");
-      return false;
-  }
-
-  const phoneRegex = /^\d{10}$/;
-  if (!phoneRegex.test(phone)) {
-      alert("Phone number must be 10 digits and only contain numbers");
-      return false;
-  }
-
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-      alert("Email must contain @");
-      return false;
-  }
-
-  if (password !== confirmPassword) {
-      alert("Passwords do not match");
-      return false;
-  }
-
-  return true;
-}
-
-document.querySelector('#loginModal .btn--primary').addEventListener('click', function(event) {
-  if (!validateLoginForm()) {
-      event.preventDefault();
-  }
-});
-
-document.querySelector('#registerModal .btn--primary').addEventListener('click', function(event) {
-  if (!validateRegisterForm()) {
-      event.preventDefault();
-  }
-});
 
 
 

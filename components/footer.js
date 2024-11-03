@@ -96,5 +96,4 @@ function generateFooter() {
     }
 }
 
-// Call the function to generate the footer
 generateFooter();

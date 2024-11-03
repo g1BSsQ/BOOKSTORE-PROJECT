@@ -7,7 +7,7 @@ function loadSliderProducts() {
         sliderProducts = JSON.parse(sliderData);
       } catch (error) {
         console.error("Error parsing JSON:", error);
-        sliderProducts = []; // Default to an empty array if JSON is invalid
+        sliderProducts = [];
       }
     } else {
       sliderProducts = [];

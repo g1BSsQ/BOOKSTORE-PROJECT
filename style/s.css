@@ -139,7 +139,6 @@ left: -60px;
     bottom: 0;
     left: 0;
     display: none;
-        /* Ẩn modal mặc định */
         justify-content: center;
         align-items: center;
         background-color: rgba(0, 0, 0, 0.5);
@@ -159,11 +158,8 @@ left: -60px;
         z-index: 1001;
         width: 50%;
         margin: 0 auto;
-        /* Căn giữa ngang */
         display: flex;
-        /* Sử dụng flexbox */
         flex-direction: column;
-        /* Căn dọc */
         align-items: center;
 }
 .auth-form {
@@ -496,12 +492,10 @@ left: -60px;
 }
 .product-gallery-one-content-product-item {
     transition: box-shadow 0.3s ease;
-    /* Smooth transition for the hover effect */
 }
 
 .product-gallery-one-content-product-item:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    /* Add shadow on hover */
 }
 
 .product-gallery-one-conten-litle h2{
@@ -543,14 +537,11 @@ left: -60px;
     padding-right: 1px;
 }
 
-
-/* ...base.css.... */
 .gird{
     width: 1200px;
     max-width: 100%;
     margin: 0 auto;
 }
-/* nếu không muốn sử dụng .gird */
 .gird__full-width{
     width: 100%;
 }
@@ -558,13 +549,11 @@ left: -60px;
     display: flex;
     flex-wrap: wrap;
 }
-/* chia 5 item trên 1 chiều ngang */
 .gird__colum-2-4{
     padding-left: 5px;
     padding-right: 5px;
     width: 20%;
 }
-/* ....footer.... */
 .footer{
     border-top: 5px solid red;
     padding-top: 30px;
@@ -594,5 +583,4 @@ left: -60px;
     text-align: center;
 }
 
-/* ......modal */
  

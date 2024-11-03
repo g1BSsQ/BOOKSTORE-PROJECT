@@ -127,7 +127,6 @@ function generateHeader() {
     }
 }
 
-// Call the function to generate the content
 generateHeader();
 function validateLoginForm() {
     const phone = document.querySelector('#loginModal input[type="text"]').value;
