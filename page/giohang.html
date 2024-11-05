@@ -15,6 +15,46 @@
 </head>
 
 <body>
+    <div class="modal" id="purchaseModal">
+        <div class="modal_overlay"></div>
+        <div class="modal_body">
+            <!-- ......thanh toán.....  -->
+            <div class="auth-form">
+                <div class="auth-form_container">
+                    <div class="auth-form_header">
+                        <h3 class="mua-hang">Mua hàng</h3>
+                    </div>
+                    <div class="auth-form_form">
+                        <p>Họ và tên :</p>
+                        <div class="auth-form_group">
+                            <input placeholder="Họ và tên" type="text" class="auth-form_input">
+                        </div>
+                        <p>Số điện thoại :</p>
+                        <div class="auth-form_group">
+                            <input placeholder="Số điện thoại" type="text" class="auth-form_input">
+                        </div>
+                        <p>Email :</p>
+                        <div class="auth-form_group">
+                            <input placeholder="Email" type="text" class="auth-form_input">
+                        </div>
+                        <p>Địa chỉ :</p>
+                        <div class="auth-form_group">
+                            <input placeholder="Địa chỉ" type="text" class="auth-form_input">
+                        </div>
+                        <p>Thời gian nhận trong ngày (8h-18h):</p>
+                        <div class="auth-form_group">
+                            <input placeholder="8h-18h" type="text" class="auth-form_input">
+                        </div>
+                    </div>
+                    <div class="auth-form_controls">
+                        <button class="btn auth-form_controls_back" onclick="closeModal('purchaseModal')">Thoát</button>
+                        <button class="btn btn--primary"><a href="index.html">Xác nhận mua hàng</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="header"></div>
     <!-- nav giỏ hang  -->
     <div class="gio-hang">
@@ -48,48 +88,9 @@
                     <h4>Tổng Số Tiền :</h4>
                     <span class="tien"></span>
                 </div>
-                <div class="thanh-toan"><a href="index.html">Thanh toán</a></div>
+                <div class="thanh-toan"><a href="#" onclick="openModal('purchaseModal')">Thanh toán</a></div>
             </div>
 
-        </div>
-    </div>
-    <!-- thông tin khách hang  -->
-    <div class="gio-hang">
-        <h3 class="mua-hang">Mua hàng</h3>
-        <div class="thong-tin">
-            <ul class="thong-tin-ul">
-                <li>Họ tên</li>
-                <li>
-                    <input class="thong-tin-ip" type="text">
-                </li>
-            </ul>
-            <ul class="thong-tin-ul">
-                <li>Địa chỉ </li>
-                <li>
-                    <input class="thong-tin-ip" type="text">
-                </li>
-            </ul>
-            <ul class="thong-tin-ul">
-                <li>Số điện thoại </li>
-                <li>
-                    <input class="thong-tin-ip" type="text">
-                </li>
-            </ul>
-            <ul class="thong-tin-ul">
-                <li>Email</li>
-                <li>
-                    <input class="thong-tin-ip" type="text">
-                </li>
-            </ul>
-            <ul class="thong-tin-ul">
-                <li>Thời gian nhận trong ngày 8h - 18h</li>
-                <li>
-                    <input class="thong-tin-ip" type="text">
-                </li>
-            </ul>
-            <ul class="thong-tin-ul">
-                <li><a href="index.html">Xác nhận mua hàng</a></li>
-            </ul>
         </div>
     </div>
     <div id="footer"></div>
